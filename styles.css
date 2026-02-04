@@ -537,19 +537,24 @@ input {
   font-weight: 500;
 }
 
-.tag-popular {
-  background: #ffebee;
-  color: #c62828;
+.tag-new {
+  background: #1a1a1a;
+  color: #fff;
 }
 
-.tag-limited {
-  background: #fff3e0;
-  color: #e65100;
+.tag-restock {
+  background: #e8f5e9;
+  color: #2e7d32;
 }
 
-.tag-fewleft {
+.tag-preorder {
   background: #e3f2fd;
   color: #1565c0;
+}
+
+.tag-points {
+  background: #fff3e0;
+  color: #e65100;
 }
 
 .tag-cute {

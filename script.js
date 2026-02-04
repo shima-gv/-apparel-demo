@@ -1,8 +1,35 @@
-// タグ種類
+// 30種類のタグ
 const tagPool = [
-  { label: "人気", className: "tag-popular" },
-  { label: "限定", className: "tag-limited" },
-  { label: "残りわずか", className: "tag-fewleft" }
+  { label: "可愛い系", className: "tag-cute" },
+  { label: "トレンド", className: "tag-trend" },
+  { label: "30代に人気", className: "tag-30s" },
+  { label: "SNSで話題", className: "tag-sns" },
+  { label: "きれいめ", className: "tag-elegant" },
+  { label: "カジュアル", className: "tag-casual" },
+  { label: "ミニマル", className: "tag-minimal" },
+  { label: "ベーシック", className: "tag-basic" },
+  { label: "上質", className: "tag-lux" },
+  { label: "ふんわり", className: "tag-soft" },
+  { label: "体型カバー", className: "tag-cover" },
+  { label: "着回し力", className: "tag-mix" },
+  { label: "オフィスOK", className: "tag-office" },
+  { label: "抜け感", className: "tag-relaxed" },
+  { label: "きちんと見え", className: "tag-neat" },
+  { label: "春色", className: "tag-spring" },
+  { label: "透明感", className: "tag-clear" },
+  { label: "こなれ感", className: "tag-effortless" },
+  { label: "定番カラー", className: "tag-classic" },
+  { label: "肌触り◎", className: "tag-touch" },
+  { label: "低身長OK", className: "tag-petite" },
+  { label: "高身長OK", className: "tag-tall" },
+  { label: "旅行向き", className: "tag-travel" },
+  { label: "撮影映え", className: "tag-photo" },
+  { label: "リラックス", className: "tag-relax" },
+  { label: "シワになりにくい", className: "tag-wrinkle" },
+  { label: "洗える", className: "tag-washable" },
+  { label: "透けにくい", className: "tag-opaque" },
+  { label: "セットアップ可", className: "tag-setup" },
+  { label: "レイヤード向き", className: "tag-layered" }
 ];
 
 // 9つのテーマデータ
