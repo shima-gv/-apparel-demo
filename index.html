@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apparel Market | 公式オンラインストア</title>
+    <meta
+      name="description"
+      content="アパレルのECサイトのデモトップページ。新作、人気カテゴリ、トレンドのアイテムをシンプルに探せます。"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="#">
+          <span class="brand-mark">AM</span>
+          Apparel Market
+        </a>
+        <form class="search-form" action="#" aria-label="商品検索">
+          <input type="search" placeholder="商品名・ブランド・キーワードで検索" />
+          <button type="submit">検索</button>
+        </form>
+        <nav class="header-links">
+          <a href="#">出品</a>
+          <a href="#">お知らせ</a>
+          <a href="#">マイページ</a>
+        </nav>
+      </div>
+      <div class="header-sub">
+        <nav class="category-nav" aria-label="カテゴリナビゲーション">
+          <a href="#">おすすめ</a>
+          <a href="#">レディース</a>
+          <a href="#">メンズ</a>
+          <a href="#">キッズ</a>
+          <a href="#">バッグ</a>
+          <a href="#">シューズ</a>
+          <a href="#">セール</a>
+        </nav>
+        <div class="header-actions">
+          <button class="pill">新規登録</button>
+          <button class="pill ghost">ログイン</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="welcome">
+        <p>いらっしゃいませ。いつもありがとうございます。<br>本日もお気に入りの一着が見つかりますように。</p>
+      </section>
+
+      <section class="section recommend" id="theme-sections">
+        <!-- 3つのテーマセクションがJavaScriptで動的に生成されます -->
+      </section>
+
+      <!-- もっと教えてボタン＋店員 -->
+      <div class="more-recommend">
+        <div class="staff-bubble-wrapper" id="staff-bubble-wrapper">
+          <div class="speech-bubble" id="speech-bubble">
+            <span class="bubble-text">もっと教えて</span>
+          </div>
+          <img src="./images/staff_icon.png" alt="スタッフ" class="staff-icon" id="staff-icon">
+          <img src="./images/staff_surprised.png" alt="スタッフ（びっくり）" class="staff-icon staff-surprised" id="staff-surprised">
+        </div>
+      </div>
+
+      <!-- ローディングオーバーレイ -->
+      <div class="loading-overlay" id="loading-overlay">
+        <div class="loading-content">
+          <img src="./images/staff_icon.png" alt="スタッフ" class="loading-staff">
+          <div class="loading-bubble">
+            <span class="loading-text">考え中</span>
+            <span class="loading-dots"></span>
+          </div>
+        </div>
+      </div>
+
+      <section class="section">
+        <div class="section-header">
+          <h2>おすすめカテゴリ</h2>
+          <a class="more-link" href="#">すべて見る</a>
+        </div>
+        <div class="category-grid">
+          <article class="category-card">
+            <div class="category-icon">👗</div>
+            <h3>レディース</h3>
+            <p>ワンピース・トップス・ボトムス</p>
+          </article>
+          <article class="category-card">
+            <div class="category-icon">🧥</div>
+            <h3>メンズ</h3>
+            <p>アウター・シャツ・デニム</p>
+          </article>
+          <article class="category-card">
+            <div class="category-icon">🧢</div>
+            <h3>アクセサリー</h3>
+            <p>帽子・ベルト・ジュエリー</p>
+          </article>
+          <article class="category-card">
+            <div class="category-icon">👟</div>
+            <h3>シューズ</h3>
+            <p>スニーカー・パンプス・ブーツ</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section trending">
+        <div class="section-header">
+          <h2>トレンドアイテム</h2>
+          <a class="more-link" href="#">ランキング</a>
+        </div>
+        <div class="product-grid">
+          <article class="product-card">
+            <div class="product-info">
+              <p class="product-label">人気 1位</p>
+              <p class="product-name">オーバーサイズシャツ</p>
+              <p class="product-brand">Studio Line</p>
+              <p class="product-price">¥3,900</p>
+            </div>
+          </article>
+          <article class="product-card">
+            <div class="product-info">
+              <p class="product-label">人気 2位</p>
+              <p class="product-name">ボリュームスカート</p>
+              <p class="product-brand">LUX</p>
+              <p class="product-price">¥4,500</p>
+            </div>
+          </article>
+          <article class="product-card">
+            <div class="product-info">
+              <p class="product-label">人気 3位</p>
+              <p class="product-name">レザーミニバッグ</p>
+              <p class="product-brand">Knot</p>
+              <p class="product-price">¥5,200</p>
+            </div>
+          </article>
+          <article class="product-card">
+            <div class="product-info">
+              <p class="product-label">注目</p>
+              <p class="product-name">クラシックローファー</p>
+              <p class="product-brand">Atelier</p>
+              <p class="product-price">¥7,800</p>
+            </div>
+          </article>
+          <article class="product-card">
+            <div class="product-info">
+              <p class="product-label">新着</p>
+              <p class="product-name">ワイドデニム</p>
+              <p class="product-brand">Neutral</p>
+              <p class="product-price">¥4,200</p>
+            </div>
+          </article>
+          <article class="product-card">
+            <div class="product-info">
+              <p class="product-label">人気</p>
+              <p class="product-name">ニットベスト</p>
+              <p class="product-brand">Sora</p>
+              <p class="product-price">¥2,900</p>
+            </div>
+          </article>
+          <article class="product-card">
+            <div class="product-info">
+              <p class="product-label">トレンド</p>
+              <p class="product-name">フレアパンツ</p>
+              <p class="product-brand">Mode</p>
+              <p class="product-price">¥3,600</p>
+            </div>
+          </article>
+          <article class="product-card">
+            <div class="product-info">
+              <p class="product-label">再入荷</p>
+              <p class="product-name">ビッグトート</p>
+              <p class="product-brand">Road</p>
+              <p class="product-price">¥4,800</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section campaign">
+        <div class="campaign-card">
+          <div>
+            <h2>送料無料キャンペーン</h2>
+            <p>
+              今なら3,000円以上の購入で全国どこでも送料無料。
+              セールアイテムも対象です。
+            </p>
+          </div>
+          <button class="primary">キャンペーン詳細</button>
+        </div>
+        <div class="campaign-card light">
+          <div>
+            <h2>クーポン配布中</h2>
+            <p>新規会員登録で10%OFFクーポンをプレゼント。</p>
+          </div>
+          <button class="secondary">登録する</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-columns">
+        <div>
+          <h3>Apparel Market</h3>
+          <p>あなたの毎日を彩るアパレルECサイト。</p>
+        </div>
+        <div>
+          <h4>サービス</h4>
+          <a href="#">ご利用ガイド</a>
+          <a href="#">配送・返品</a>
+          <a href="#">お問い合わせ</a>
+        </div>
+        <div>
+          <h4>カテゴリ</h4>
+          <a href="#">新作</a>
+          <a href="#">人気ブランド</a>
+          <a href="#">セール</a>
+        </div>
+        <div>
+          <h4>公式SNS</h4>
+          <a href="#">Instagram</a>
+          <a href="#">X</a>
+          <a href="#">LINE</a>
+        </div>
+      </div>
+      <p class="footer-copy">© 2026 Apparel Market, Inc.</p>
+    </footer>
+  </body>
+</html>

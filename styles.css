@@ -1,0 +1,1236 @@
+:root {
+  color-scheme: light;
+  --bg: #ffffff;
+  --surface: #f6f6f8;
+  --surface-strong: #eeeeef;
+  --text: #1d1d1f;
+  --muted: #6c6c70;
+  --primary: #ff4d4d;
+  --primary-dark: #e23e3e;
+  --accent: #222222;
+  --border: #e1e1e4;
+  --shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  --radius: 18px;
+  --radius-sm: 12px;
+  --max-width: 1200px;
+  font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+.site-header {
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 18px 20px 12px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-mark {
+  display: inline-flex;
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  background: var(--primary);
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+}
+
+.search-form {
+  flex: 1;
+  display: flex;
+  gap: 8px;
+}
+
+.search-form input {
+  flex: 1;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.search-form button {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 10px 18px;
+  cursor: pointer;
+}
+
+.header-links {
+  display: flex;
+  gap: 18px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.header-sub {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 8px 20px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.category-nav {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.header-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.pill {
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: none;
+  background: var(--primary);
+  color: #fff;
+  cursor: pointer;
+}
+
+.pill.ghost {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+.hero {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 40px 20px 20px;
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.hero-tag {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.hero h1 {
+  font-size: clamp(28px, 4vw, 44px);
+  line-height: 1.2;
+}
+
+.hero-lead {
+  color: var(--muted);
+  max-width: 520px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.primary,
+.secondary {
+  padding: 12px 22px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.primary {
+  background: var(--primary);
+  color: #fff;
+}
+
+.primary:hover {
+  background: var(--primary-dark);
+}
+
+.secondary {
+  background: var(--surface);
+  color: var(--text);
+}
+
+.hero-metrics {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.metric {
+  font-size: 20px;
+  font-weight: 700;
+  display: block;
+}
+
+.metric-label {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.hero-card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 22px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.pickup {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.pickup-label {
+  display: inline-block;
+  font-size: 12px;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.pickup-name {
+  font-weight: 700;
+}
+
+.pickup-price {
+  font-size: 18px;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.pickup-note {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.pickup-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.welcome {
+  max-width: var(--max-width);
+  margin: 16px auto 0;
+  padding: 36px 28px;
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+.welcome::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('./images/welcome_lounge_bg.png') center/cover no-repeat;
+  filter: blur(1px) brightness(0.7);
+  z-index: 0;
+}
+
+.welcome::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(20, 20, 25, 0.55) 0%,
+    rgba(40, 35, 35, 0.35) 100%
+  );
+  z-index: 1;
+}
+
+.welcome p {
+  position: relative;
+  z-index: 2;
+  font-family: "游明朝", "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: clamp(15px, 2vw, 20px);
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  line-height: 2;
+  color: #fff;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+}
+
+.recommend {
+  padding-top: 24px;
+}
+
+/* テーマコンテナ */
+.theme-container {
+  margin-bottom: 36px;
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* テーマヘッダー（ボーダーなし・透明背景） */
+.theme-header {
+  margin-bottom: 18px;
+  padding: 24px 28px;
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: transparent;
+  animation: slideInFromRight 0.7s ease forwards;
+  opacity: 0;
+  transform: translateX(80px);
+}
+
+/* テーマ背景画像（右側25%に配置） */
+.theme-header::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 25%;
+  height: 100%;
+  background: var(--bg-image) center/cover no-repeat;
+  opacity: 0.6;
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(to right, transparent, rgba(0,0,0,0.3) 20%, rgba(0,0,0,0.8));
+  mask-image: linear-gradient(to right, transparent, rgba(0,0,0,0.3) 20%, rgba(0,0,0,0.8));
+}
+
+.theme-title {
+  position: relative;
+  z-index: 1;
+  font-family: "游明朝", "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 8px;
+  letter-spacing: 0.08em;
+}
+
+.theme-concept {
+  position: relative;
+  z-index: 1;
+  font-size: 15px;
+  color: var(--muted);
+  font-family: "游明朝", "Yu Mincho", "Hiragino Mincho ProN", serif;
+  letter-spacing: 0.06em;
+}
+
+/* テーマごとのアニメーション遅延 */
+.theme-container[data-delay="0"] .theme-header { animation-delay: 0.1s; }
+.theme-container[data-delay="1"] .theme-header { animation-delay: 1.3s; }
+.theme-container[data-delay="2"] .theme-header { animation-delay: 2.5s; }
+
+.recommend-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+/* レコメンドカード */
+.recommend-card {
+  background: #fff;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  cursor: pointer;
+  animation: slideInFromRight 0.6s ease forwards;
+  opacity: 0;
+  transform: translateX(50px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recommend-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* テーマ1のパネルアニメーション遅延 */
+.theme-container[data-delay="0"] .recommend-card:nth-child(1) { animation-delay: 0.5s; }
+.theme-container[data-delay="0"] .recommend-card:nth-child(2) { animation-delay: 0.62s; }
+.theme-container[data-delay="0"] .recommend-card:nth-child(3) { animation-delay: 0.74s; }
+.theme-container[data-delay="0"] .recommend-card:nth-child(4) { animation-delay: 0.86s; }
+.theme-container[data-delay="0"] .recommend-card:nth-child(5) { animation-delay: 0.98s; }
+
+/* テーマ2のパネルアニメーション遅延 */
+.theme-container[data-delay="1"] .recommend-card:nth-child(1) { animation-delay: 1.7s; }
+.theme-container[data-delay="1"] .recommend-card:nth-child(2) { animation-delay: 1.82s; }
+.theme-container[data-delay="1"] .recommend-card:nth-child(3) { animation-delay: 1.94s; }
+.theme-container[data-delay="1"] .recommend-card:nth-child(4) { animation-delay: 2.06s; }
+.theme-container[data-delay="1"] .recommend-card:nth-child(5) { animation-delay: 2.18s; }
+
+/* テーマ3のパネルアニメーション遅延 */
+.theme-container[data-delay="2"] .recommend-card:nth-child(1) { animation-delay: 2.9s; }
+.theme-container[data-delay="2"] .recommend-card:nth-child(2) { animation-delay: 3.02s; }
+.theme-container[data-delay="2"] .recommend-card:nth-child(3) { animation-delay: 3.14s; }
+.theme-container[data-delay="2"] .recommend-card:nth-child(4) { animation-delay: 3.26s; }
+.theme-container[data-delay="2"] .recommend-card:nth-child(5) { animation-delay: 3.38s; }
+
+.recommend-image {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--surface);
+}
+
+.recommend-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.recommend-card:hover .recommend-image img {
+  transform: scale(1.08);
+}
+
+.recommend-info {
+  padding: 12px 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.recommend-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.recommend-color {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.recommend-price {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.recommend-price .tax {
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--muted);
+  margin-left: 4px;
+}
+
+/* ランキングバッジ */
+.recommend-image {
+  position: relative;
+}
+
+.recommend-rank {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 26px;
+  height: 26px;
+  background: #2d8b57;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 600;
+  z-index: 2;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* 1位〜3位は金銀銅、他は緑 */
+.recommend-grid .recommend-card:nth-child(1) .recommend-rank {
+  background: linear-gradient(135deg, #f6e27f, #d4af37);
+  color: #5a4300;
+}
+
+.recommend-grid .recommend-card:nth-child(2) .recommend-rank {
+  background: linear-gradient(135deg, #f2f2f2, #bdbdbd);
+  color: #4a4a4a;
+}
+
+.recommend-grid .recommend-card:nth-child(3) .recommend-rank {
+  background: linear-gradient(135deg, #e0a96d, #b87333);
+  color: #4a2b10;
+}
+
+/* ブランド名 */
+.recommend-brand {
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+}
+
+/* タグ */
+.recommend-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.tag {
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-weight: 500;
+}
+
+.tag-new {
+  background: #1a1a1a;
+  color: #fff;
+}
+
+.tag-restock {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.tag-preorder {
+  background: #e3f2fd;
+  color: #1565c0;
+}
+
+.tag-points {
+  background: #fff3e0;
+  color: #e65100;
+}
+
+.tag-cute {
+  background: #fce4ec;
+  color: #ad1457;
+}
+
+.tag-trend {
+  background: #fff3e0;
+  color: #ef6c00;
+}
+
+.tag-30s {
+  background: #e8eaf6;
+  color: #3949ab;
+}
+
+.tag-sns {
+  background: #f3e5f5;
+  color: #7b1fa2;
+}
+
+.tag-elegant {
+  background: #f5f5f5;
+  color: #4e4e4e;
+}
+
+.tag-casual {
+  background: #fff8e1;
+  color: #f57f17;
+}
+
+.tag-minimal {
+  background: #eceff1;
+  color: #37474f;
+}
+
+.tag-basic {
+  background: #ede7f6;
+  color: #5e35b1;
+}
+
+.tag-lux {
+  background: #e0f2f1;
+  color: #00695c;
+}
+
+.tag-soft {
+  background: #f3e5f5;
+  color: #8e24aa;
+}
+
+.tag-cover {
+  background: #e0f7fa;
+  color: #00838f;
+}
+
+.tag-mix {
+  background: #ede7f6;
+  color: #512da8;
+}
+
+.tag-office {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.tag-relaxed {
+  background: #f1f8e9;
+  color: #558b2f;
+}
+
+.tag-neat {
+  background: #eceff1;
+  color: #455a64;
+}
+
+.tag-spring {
+  background: #fff3e0;
+  color: #ef6c00;
+}
+
+.tag-clear {
+  background: #e1f5fe;
+  color: #0277bd;
+}
+
+.tag-effortless {
+  background: #ede7f6;
+  color: #673ab7;
+}
+
+.tag-classic {
+  background: #f5f5f5;
+  color: #616161;
+}
+
+.tag-touch {
+  background: #fffde7;
+  color: #f9a825;
+}
+
+.tag-petite {
+  background: #e8f5e9;
+  color: #388e3c;
+}
+
+.tag-tall {
+  background: #fbe9e7;
+  color: #d84315;
+}
+
+.tag-travel {
+  background: #e0f2f1;
+  color: #00796b;
+}
+
+.tag-photo {
+  background: #e8eaf6;
+  color: #3f51b5;
+}
+
+.tag-relax {
+  background: #f1f8e9;
+  color: #689f38;
+}
+
+.tag-wrinkle {
+  background: #fffde7;
+  color: #f57f17;
+}
+
+.tag-washable {
+  background: #e3f2fd;
+  color: #1565c0;
+}
+
+.tag-opaque {
+  background: #eceff1;
+  color: #546e7a;
+}
+
+.tag-setup {
+  background: #fce4ec;
+  color: #c2185b;
+}
+
+.tag-layered {
+  background: #e0f7fa;
+  color: #0097a7;
+}
+
+@media (max-width: 1024px) {
+  .recommend-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .recommend-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .theme-title {
+    font-size: 16px;
+  }
+
+  .theme-header::before {
+    width: 140px;
+    height: 140px;
+    right: -20px;
+    bottom: -20px;
+  }
+}
+
+.recommend-row {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 20px;
+  align-items: stretch;
+  padding: 18px 20px;
+  border-radius: var(--radius);
+  background: #fff;
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.recommend-theme {
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--accent);
+  line-height: 1.4;
+  display: flex;
+  align-items: center;
+}
+
+.recommend-panels-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.recommend-panels {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 6px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+
+.recommend-panels::-webkit-scrollbar {
+  height: 6px;
+}
+
+.recommend-panels::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.recommend-panels::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+
+.recommend-panel {
+  flex: 0 0 130px;
+  background: var(--surface);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  animation: slideIn 0.6s ease forwards;
+  transform: translateX(40px);
+  opacity: 0;
+}
+
+.panel-image {
+  width: 100%;
+  height: 180px;
+  background: linear-gradient(135deg, #e8e8ea, #d8d8db);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.panel-info {
+  padding: 10px 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.recommend-panel .label {
+  font-size: 11px;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.recommend-panel .name {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.recommend-panel .price {
+  font-size: 14px;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.swipe-hint {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 6px;
+  width: 50px;
+  background: linear-gradient(to right, transparent, #fff 60%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.swipe-arrow {
+  font-size: 28px;
+  color: var(--muted);
+  animation: swipeArrow 1.2s ease-in-out infinite;
+}
+
+.swipe-text {
+  font-size: 10px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+@keyframes swipeArrow {
+  0%, 100% {
+    transform: translateX(0);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateX(6px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.section {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 32px 20px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.more-link {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.category-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.category-card {
+  padding: 18px;
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  display: grid;
+  gap: 8px;
+}
+
+.category-icon {
+  font-size: 28px;
+}
+
+.category-card p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.trending {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.product-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.product-card {
+  background: #fff;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  display: grid;
+}
+
+.product-label {
+  font-size: 12px;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.product-info {
+  padding: 14px 16px 18px;
+  display: grid;
+  gap: 4px;
+}
+
+.product-name {
+  font-weight: 600;
+}
+
+.product-brand {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.product-price {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.campaign {
+  display: grid;
+  gap: 18px;
+}
+
+.campaign-card {
+  background: var(--accent);
+  color: #fff;
+  border-radius: var(--radius);
+  padding: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.campaign-card.light {
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.site-footer {
+  background: #0f0f10;
+  color: #fff;
+  padding: 40px 20px 24px;
+}
+
+.footer-columns {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  gap: 22px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.footer-columns h3,
+.footer-columns h4 {
+  margin-bottom: 10px;
+}
+
+.footer-columns a {
+  display: block;
+  color: #d7d7d9;
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+.footer-copy {
+  text-align: center;
+  color: #8a8a8f;
+  margin-top: 24px;
+  font-size: 12px;
+}
+
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .header-links {
+    justify-content: center;
+  }
+
+  .search-form {
+    width: 100%;
+  }
+
+  .search-form button {
+    width: 110px;
+  }
+
+  .header-sub {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .campaign-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .recommend-row {
+    grid-template-columns: 1fr;
+  }
+
+  .recommend-theme {
+    padding-bottom: 8px;
+  }
+
+  .recommend-panel {
+    flex: 0 0 120px;
+  }
+
+  .panel-image {
+    height: 160px;
+  }
+}
+
+/* もっと教えてボタン＋店員 */
+.more-recommend {
+  display: flex;
+  justify-content: center;
+  padding: 32px 0 48px;
+}
+
+.staff-bubble-wrapper {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  cursor: pointer;
+}
+
+.speech-bubble {
+  position: relative;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 20px;
+  padding: 16px 32px;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  transition: all 0.3s ease;
+}
+
+.speech-bubble::after {
+  content: '';
+  position: absolute;
+  right: -12px;
+  bottom: 20px;
+  border-width: 12px;
+  border-style: solid;
+  border-color: transparent transparent transparent #764ba2;
+}
+
+.staff-bubble-wrapper:hover .speech-bubble {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
+}
+
+.bubble-text {
+  font-family: "游明朝", "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0.1em;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.staff-icon {
+  width: 160px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.staff-surprised {
+  display: none;
+  width: 160px;
+  height: auto;
+}
+
+.staff-bubble-wrapper:hover .staff-icon {
+  transform: scale(1.05);
+}
+
+/* クリック時に通常を隠してびっくりを表示 */
+.staff-bubble-wrapper.clicked #staff-icon {
+  display: none;
+}
+
+.staff-bubble-wrapper.clicked .staff-surprised {
+  display: block;
+  animation: jumpSurprise 0.6s ease-in-out;
+}
+
+@keyframes jumpSurprise {
+  0% { transform: scale(1) translateY(0); }
+  25% { transform: scale(1.15) translateY(-25px); }
+  50% { transform: scale(1.1) translateY(-15px); }
+  75% { transform: scale(1.12) translateY(-20px); }
+  100% { transform: scale(1) translateY(0); }
+}
+
+/* クリック時の吹き出し変化 */
+.speech-bubble.clicked {
+  animation: bubblePop 0.4s ease;
+}
+
+.speech-bubble.clicked .bubble-text::after {
+  content: '！';
+}
+
+@keyframes bubblePop {
+  0% { transform: scale(1); }
+  30% { transform: scale(1.15); }
+  60% { transform: scale(0.95); }
+  100% { transform: scale(1); }
+}
+
+/* ローディングオーバーレイ */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.loading-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.loading-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.loading-staff {
+  width: 220px;
+  height: auto;
+  animation: bounce 1s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.loading-bubble {
+  background: #fff;
+  border: 2px solid #fecfef;
+  border-radius: 20px;
+  padding: 16px 28px;
+  box-shadow: 0 4px 20px rgba(255, 154, 158, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.loading-text {
+  font-family: "游明朝", "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 20px;
+  color: #333;
+  letter-spacing: 0.1em;
+}
+
+.loading-dots::after {
+  content: '';
+  animation: dots 1.5s steps(4, end) infinite;
+}
+
+@keyframes dots {
+  0% { content: ''; }
+  25% { content: '.'; }
+  50% { content: '..'; }
+  75% { content: '...'; }
+  100% { content: ''; }
+}
