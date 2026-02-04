@@ -1072,9 +1072,13 @@ input {
 
 .staff-bubble-wrapper {
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   gap: 16px;
   cursor: pointer;
+}
+
+.speech-bubble {
+  margin-top: 80px;
 }
 
 .speech-bubble {
@@ -1138,9 +1142,9 @@ input {
 
 @keyframes jumpSurprise {
   0% { transform: scale(1) translateY(0); }
-  25% { transform: scale(1.15) translateY(-25px); }
-  50% { transform: scale(1.1) translateY(-15px); }
-  75% { transform: scale(1.12) translateY(-20px); }
+  25% { transform: scale(1) translateY(-25px); }
+  50% { transform: scale(1) translateY(-15px); }
+  75% { transform: scale(1) translateY(-20px); }
   100% { transform: scale(1) translateY(0); }
 }
 
